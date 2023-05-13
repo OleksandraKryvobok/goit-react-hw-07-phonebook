@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const Input = styled.input`
+    display: block;
+
     font-size: 14px;
     font-weight: 500;
 
     width: 170px;
     padding: 5px;
+    margin-bottom: 16px;
     border: 1px solid #c2c1c1;
     border-radius: 2px;
     
