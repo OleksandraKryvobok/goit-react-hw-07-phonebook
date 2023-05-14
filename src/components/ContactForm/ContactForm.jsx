@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { nanoid } from "nanoid";
 import { Form, FormField, Field, ErrorMessage } from "./ContactForm.styled";
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 import { addContact } from 'redux/operations';
 
 const ContactSchema = Yup.object().shape({
@@ -17,7 +17,7 @@ const ContactSchema = Yup.object().shape({
 });
 
 const ContactForm = () => {
-    const contacts = useSelector(getContacts);
+    const contacts = useSelector(selectContacts);
     const dispatch = useDispatch();
 
     const addNewContact = (newContact, actions) => {
